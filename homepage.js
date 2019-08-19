@@ -1,6 +1,6 @@
 function fashionClick() {
   fashion.onended = function () {
-    window.location.href = "fashionpage.html";
+    window.location.href = "fashion.html";
   }
 }
 
