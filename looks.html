@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <script type="text/javascript"  src="homepage.js"></script>
     <script type="text/javascript"  src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="jquery.shuffle-images.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="fashion, mental health, fire, outfits, streetwear, women's fashion, high fashion, women's wear, inclusivity, lookbook, seasonal, winter, spring, summer, fall, clinical, brand, clothes, looks, design, fashion design, silhouette, videos, concept videos, brain">
@@ -11,7 +12,13 @@
     <meta name="description" content="Combining fashion and mental health awareness. This is CLINICAL.">
 
     <script type="text/javascript">
-      </script>
+       $(".shuffle-me").shuffleImages({
+   trigger: "imageHover",  
+   triggerTarget: false, // For "imageMouseMove", and "imageHover" only, you can set which element to trigger the image shuffle when mouse over. For example, if you want a container ".main" to trigger an image shuffle instead of the image itself, put $(".main") for this option. Default value is false.
+   hoverTrigger: 1000,  // For "imageHover" only, you can set how long you have to hover the image until it shuffles to other images. The option accepts milliseconds without unit. The default value is 200.
+   target: "> img"              // In case you have a complete HTML structure, you can set your own custom selector to your images here. The default value is "> img" which means images that are directly under the "shuffle-me" will be used to shuffle.
+ });
+   </script>
 
     <style>
       #static {
@@ -131,8 +138,8 @@
       
       
    #H2 {
-    width:377px;
-    height:337px;
+    width:200px;
+    height:200px;
   }
       
       
@@ -142,8 +149,8 @@
   }
    
    #Z2 {
-    width:255px;
-    height:340px;
+    width:200px;
+    height:200px;
   }
 
   /* img {
@@ -161,7 +168,7 @@
   opacity:0;
 }
 
- {
+/*  {
   box-sizing: border-box;
 }
 
@@ -171,12 +178,15 @@
   padding: 5px;
 }
 
-/* Clearfix (clear floats) */
+Clearfix (clear floats)
 .row::after {
   content: "";
   clear: both;
   display: table;
-}
+} */
+
+      
+ 
       
 
 </style>
@@ -188,30 +198,33 @@
       <center><strong>ITEMS & LOOKS</strong></center>
     </p>
     <center>
-      <div class="row1">
+<!--       <div class="row1">
         <div class="column">
-          <br></br><br></br>
+          <br></br><br></br> -->
+      <div class="shuffle-me" data-si-hover-trigger="1000">
           <img id= "purse" class="static" src="purse.gif" alt="Purse">
           <img id= "K1" class="active" src="khadyja1.jpeg" alt="Look 1">
           <img id= "K2" class="active" src="khadyja2.jpeg" alt="Look 2" >
           <br></br><br></br><br></br><br></br><br></br><br></br>
-        </div>
+<!--         </div> -->
       </div>
-      <div class="row2">
-        <div class="column">
+<!--       <div class="row2">
+        <div class="column"> -->
+      <div class="shuffle-me" data-si-hover-trigger="1000">
         <img id= "H1" class="active" src="hailie1.jpeg" alt="Look 1">
         <img id= "shoe" class="static" src="shoe.gif" alt="Shoe">
         <img id= "H2" class="active" src="hailie2.JPEG" alt="Look 2">
         <br></br><br></br><br></br><br></br><br></br><br></br>
-        </div>
+<!--         </div> -->
       </div>
-      <div class="row3"
-        <div class="column">
+<!--       <div class="row3"
+        <div class="column"> -->
+      <div class="shuffle-me" data-si-hover-trigger="1000">
         <img id= "Z1" class="active" src="zoya1.jpeg" alt="Look 1">
         <img id= "shirt" class="static" src="shirt.gif" alt="Shirt">
         <img id= "Z2" class="active" src="zoya2.jpeg" alt="Look 2">
         <br></br><br></br><br></br><br></br><br></br><br></br>
-        </div>
+<!--         </div> -->
      </div>
     </center>
 
