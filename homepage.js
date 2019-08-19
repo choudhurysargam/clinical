@@ -16,14 +16,8 @@ function aboutClick() {
   }
 }
 
-// function toggleMute() {
-//
-//   var video=document.getElementById("myVideo");
-//
-//   if(video.muted){
-//     video.muted = false;
-//   } else {
-//     video.muted = true;
-//   }
-//
-// }
+function homeClick() {
+  about.onended = function () {
+    window.location.href = "homepage.html";
+  }
+}
