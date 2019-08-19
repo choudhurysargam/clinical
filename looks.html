@@ -127,17 +127,25 @@
 .static:hover {
   opacity:0;
 }
-      
-.static:hover .active {
-  position:absolute;
-  width: 48px;
-  height: 48px;
-  z-index: 100;
-  background: transparent url('khadyja1.jpeg', 'khadyja2.jpeg') no-repeat;
-  cursor: pointer;
+
+ {
+  box-sizing: border-box;
 }
-shareimprove this answer
-    
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+      
+
 </style>
 <title>C L I N I C A L|ITEMS & LOOKS</title>
 
@@ -147,19 +155,25 @@ shareimprove this answer
       <center><strong>ITEMS & LOOKS</strong></center>
     </p>
     <center>
-    <br></br><br></br>
-    <img id= "purse" class="static" src="purse.gif">
-    <img id= "K1" class="active" src= >
-    <img id= "K2" class="active" src= >
-    <br></br><br></br><br></br><br></br><br></br><br></br>
-    <img id= "shoe" class="static" src="shoe.gif">
-    <img id= "H1" class="active" src= >
-    <img id= "H2" class="active" src= >
-    <br></br><br></br><br></br><br></br><br></br><br></br>
-    <img id= "shirt" class="static" src="shirt.gif">
-    <img id= "Z1" class="active" src= >
-    <img id= "Z2" class="active" src= >
-    <br></br><br></br><br></br><br></br><br></br><br></br>
+      <div class="row1">
+        <div class="column">
+        <br></br><br></br>
+        <img id= "purse" class="static" src="purse.gif" alt="Purse">
+        <img id= "K1" class="active" src="khadyja1.jpeg" alt="Look 1">
+        <img id= "K2" class="active" src="khadyja2.jpeg" alt="Look 2" >
+        <br></br><br></br><br></br><br></br><br></br><br></br>
+      <div class="row2">
+        <div class="column">
+        <img id= "shoe" class="static" src="shoe.gif" alt="Shoe">
+        <img id= "H1" class="active" src="hailie1.jpeg" alt= "Look 1">
+        <img id= "H2" class="active" src="hailie2.jpeg" alt= "Look 2">
+        <br></br><br></br><br></br><br></br><br></br><br></br>
+      <div class="row3"
+        <div class="column">
+        <img id= "shirt" class="static" src="shirt.gif" alt="Shirt">
+        <img id= "Z1" class="active" src="zoya1.jpeg" alt="Look 1">
+        <img id= "Z2" class="active" src="zoya2.jpeg" alt="Look 2">
+        <br></br><br></br><br></br><br></br><br></br><br></br>
     </center>
 
 
